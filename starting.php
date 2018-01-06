@@ -1,3 +1,4 @@
+<?php
 $sql_file = 'stockmgt.sql';
 
 $contents = file_get_contents($sql_file);
@@ -27,3 +28,4 @@ foreach ($statements as $query) {
         }
     }
 }
+?>
