@@ -9,6 +9,7 @@ include_once('connect.php');
 	$result=mysqli_query($dbConn,$query);
 	if(mysqli_num_rows($result)>0)
 	  {
+		  echo "found results"; 
 		$row=mysqli_fetch_array($result);
 		$_SESSION['uname']=$row['user_name'];
 		$_SESSION['pword']=$row['password'];
@@ -16,29 +17,32 @@ include_once('connect.php');
 		session_write_close();
 		if($_SESSION['utype']=="Admin")
         {
-		
+				  echo "you are admin"; 
+
 		//header('Location: http://localhost/Stock/admin.php');
-		header('Location: admin.php');
+		//header('Location: admin.php');
 		   }
 		 else if($_SESSION['utype']=="Main_Store")
 		  {
 	
+	echo "main store";
 			//header('Location: http://localhost/Stock/mainstorehome.php');
-					header('Location: mainstorehome.php');
+		//			header('Location:mainstorehome.php');
 
           }
 	    else if($_SESSION['utype']=="Keeper")
 		  {
 	
 			//header('Location: http://localhost/Stock/substorekeeper.php');
-					header('Location: substorekeeper.php');
+					header('Location:substorekeeper.php');
 
           }
 		else if($_SESSION['utype']=="Customer")
 		  {
 			  
+			  
 		 //header('Location: http://localhost/Stock/customerhome.php');
-		 		header('Location: customerhome.php');
+		 		header('Location:customerhome.php');
 
 		  }
 		  	exit();
