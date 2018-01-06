@@ -4,7 +4,7 @@ $sqlFileToExecute = 'stockmgt.sql';
 $hostname = 'us-cdbr-gcp-east-01.cleardb.net';
 $db_user = 'bf7fc733d29771';
 $db_password = '980e67efe15a403';
-$link = mysql_connect($hostname, $db_user, $db_password);
+$link = mysqli_connect($hostname, $db_user, $db_password);
 if (!$link) {
   die ("MySQL Connection error");
 }
