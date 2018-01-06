@@ -184,7 +184,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
     </ul>
     <p><!-- end .sidebar1 --></p>
   </div><div class="content">
-<h3>A little about us ...</h3>
+<h3>we are great people!! ...</h3>
   <!-- end .content --></div>
   <div class="sidebar2">
     <h4>Login Here</h4>
