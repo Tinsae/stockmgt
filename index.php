@@ -18,27 +18,27 @@ include_once('connect.php');
         {
 		
 		//header('Location: http://localhost/Stock/admin.php');
-		header('Location: https://stockmgt.herokuapp.com/admin.php');
+		header('Location: https://stockmgt.herokuapp.com/Stock/admin.php');
 		   }
 		 else if($_SESSION['utype']=="Main_Store")
 		  {
 	
 			//header('Location: http://localhost/Stock/mainstorehome.php');
-					header('Location: https://stockmgt.herokuapp.com/mainstorehome.php');
+					header('Location: https://stockmgt.herokuapp.com/Stock/mainstorehome.php');
 
           }
 	    else if($_SESSION['utype']=="Keeper")
 		  {
 	
 			//header('Location: http://localhost/Stock/substorekeeper.php');
-					header('Location: https://stockmgt.herokuapp.com/substorekeeper.php');
+					header('Location: https://stockmgt.herokuapp.com/Stock/substorekeeper.php');
 
           }
 		else if($_SESSION['utype']=="Customer")
 		  {
 			  
 		 //header('Location: http://localhost/Stock/customerhome.php');
-		 		header('Location: https://stockmgt.herokuapp.com/customerhome.php');
+		 		header('Location: https://stockmgt.herokuapp.com/Stock/customerhome.php');
 
 		  }
 		  	exit();
