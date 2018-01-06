@@ -17,21 +17,21 @@ include_once('connect.php');
 		if($_SESSION['utype']=="Admin")
         {
 		
-		header('Location: http://localhost/Stock/admin.php');
+		header('Location: admin.php');
 		   }
 		 else if($_SESSION['utype']=="Main_Store")
 		  {
 	
-			header('Location: http://localhost/Stock/mainstorehome.php');
+			header('Location: mainstorehome.php');
           }
 	    else if($_SESSION['utype']=="Keeper")
 		  {
 	
-			header('Location: http://localhost/Stock/substorekeeper.php');
+			header('Location: substorekeeper.php');
           }
 		else if($_SESSION['utype']=="Customer")
 		  {
-		 header('Location: http://localhost/Stock/customerhome.php');
+		 header('Location: customerhome.php');
 		  }
 		  	exit();
 	      }
