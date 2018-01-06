@@ -1,64 +1,48 @@
 <?php 
 session_start();
 if(isset($_POST['submit'])) {
-
-include_once('connect.php');
+	include_once('connect.php');
 	$uname=$_POST['username'];
 	$pword=$_POST['password'];//md5($_POST['pword']) 
 	$query="SELECT * FROM user WHERE user_name='".$uname."' and password='".$pword."'";
 	$result=mysqli_query($dbConn,$query);
 	if(mysqli_num_rows($result)>0)
-	  {
-		  $message = "found results";
-			echo ("<script type='text/javascript'>alert('$message');</script>");
+	{
+				
 		$row=mysqli_fetch_array($result);
 		$_SESSION['uname']=$row['user_name'];
 		$_SESSION['pword']=$row['password'];
 		$_SESSION['utype']=$row['user_type'];
 		session_write_close();
 		if($_SESSION['utype']=="Admin")
-        {
-				  echo "you are admin"; 
-
-		//header('Location: http://localhost/Stock/admin.php');
-		//header('Location: admin.php');
-		   }
-		 else if($_SESSION['utype']=="Main_Store")
-		  {
-	
-	echo "main store";
-			//header('Location: http://localhost/Stock/mainstorehome.php');
-		//			header('Location:mainstorehome.php');
-
-          }
+		{
+			//header('Location: http://localhost/Stock/admin.php');
+			header('Location: admin.php');
+		}
+		else if($_SESSION['utype']=="Main_Store")
+		{
+			  //header('Location: http://localhost/Stock/mainstorehome.php');
+			  header('Location:mainstorehome.php');
+        }
 	    else if($_SESSION['utype']=="Keeper")
-		  {
-	
+		{
 			//header('Location: http://localhost/Stock/substorekeeper.php');
-					header('Location:substorekeeper.php');
-
-          }
+			header('Location:substorekeeper.php');
+        }
 		else if($_SESSION['utype']=="Customer")
-		  {
-			  
-			  
-		 //header('Location: http://localhost/Stock/customerhome.php');
-		 		header('Location:customerhome.php');
-
-		  }
+		{  
+			//header('Location: http://localhost/Stock/customerhome.php');
+			header('Location:customerhome.php');
+		}
 		  	exit();
-	      }
-    
-		else
-	     {
-echo '<script language="javascript">';
-echo 'window.alert("Invalid User name or password");';
-echo '</script>';
-
+	}
+	else
+	{
+		echo '<script language="javascript">';
+		echo 'window.alert("Invalid User name or password");';
+		echo '</script>';
+	}
 }
-		
-	 }
-
 ?>
 
 
