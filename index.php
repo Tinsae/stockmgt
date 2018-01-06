@@ -31,14 +31,14 @@ include_once('connect.php');
 		  {
 	
 			//header('Location: http://localhost/Stock/substorekeeper.php');
-					header('Location: https://stockmgt.herokuapp.com/substorekeeper.php')
+					header('Location: https://stockmgt.herokuapp.com/substorekeeper.php');
 
           }
 		else if($_SESSION['utype']=="Customer")
 		  {
 			  
 		 //header('Location: http://localhost/Stock/customerhome.php');
-		 		header('Location: https://stockmgt.herokuapp.com/customerhome.php')
+		 		header('Location: https://stockmgt.herokuapp.com/customerhome.php');
 
 		  }
 		  	exit();
