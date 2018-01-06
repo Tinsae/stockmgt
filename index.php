@@ -18,7 +18,7 @@ include_once('connect.php');
         {
 		
 		//header('Location: http://localhost/Stock/admin.php');
-		header('Location: https://stockmgt.herokuapp.com/admin.php')
+		header('Location: https://stockmgt.herokuapp.com/admin.php');
 		   }
 		 else if($_SESSION['utype']=="Main_Store")
 		  {
