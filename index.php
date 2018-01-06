@@ -1,6 +1,6 @@
 <?php 
  session_start();
-include_once('starting.php')
+include_once('starting.php');
 if(isset($_POST['submit'])) {
 
 include_once('connect.php');
