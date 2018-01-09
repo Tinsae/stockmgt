@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 session_start();
 if(isset($_POST['submit'])) {
 	include_once('connect.php');
@@ -169,7 +169,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 <div class="container">
   <div class="header">
     <p><a href="index.php"><img src="images/ASTU Logo.gif" alt="Insert Logo Here" name="Insert_logo" width="64" height="64" id="Insert_logo" style="background-color: #C6D580; display:block;" /></a> 
-      ASTU Stock Management
+       Stock Management
 </p>
     <ul id="MenuBar1" class="MenuBarHorizontal">
       <li><a href="index.php">Home</a>      </li>
