@@ -5,7 +5,7 @@ include('connect.php');
 if(isset($_GET['reqno']))
 {
 $reqno=$_GET['reqno'];
-$query1=mysql_query("UPDATE requestmaterial SET appv_user='".$_SESSION['uname']."' WHERE req_no=$reqno");
+$query1=mysqli_query($dbConn, "UPDATE requestmaterial SET appv_user='".$_SESSION['uname']."' WHERE req_no=$reqno");
 mysql_error();
 if($query1)
 {

@@ -165,7 +165,7 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 			</tr>
 <?php
 include('connect.php');
-$query1=mysql_query("SELECT * FROM requestmaterial WHERE appv_user IS NULL");
+$query1=mysqli_query($dbConn, "SELECT * FROM requestmaterial WHERE appv_user IS NULL");
 while($queryttt=mysql_fetch_array($query1))	
 {	
 echo "<tr><td>".$queryttt['req_no']."</td>";
@@ -192,7 +192,7 @@ echo "<td><a href='approvereq.php?reqno=".$queryttt['req_no']."'>Approve</a></td
   </tr>
 <?php
 include('connect.php');
-$query2=mysql_query("SELECT * FROM requestmaterial WHERE appv_user IS NOT NULL");
+$query2=mysqli_query($dbConn, "SELECT * FROM requestmaterial WHERE appv_user IS NOT NULL");
 while($querymmm=mysql_fetch_array($query2))	
 {	
 echo "<tr><td>".$querymmm['req_no']."</td>";

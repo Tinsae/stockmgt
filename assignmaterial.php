@@ -8,7 +8,7 @@ $quantity=$_POST['quantity'];
 
 include('connect.php');
 $query="INSERT INTO assignmaterial VALUES('$substoreid','$matid','$quantity',NOW())";
-$result=mysql_query($query);	
+$result=mysqli_query(SdbConn, $query);	
 
 if($result)
 {

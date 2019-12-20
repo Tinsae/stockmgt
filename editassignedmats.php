@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
 $assignqua=$_POST['assignqua'];
 $assigndate=$_POST['assigndate'];
 
-$query3=mysql_query("UPDATE assignmaterial SET assign_qua='$assignqua', assign_date='$assigndate' WHERE sub_store_ID='$substoreid' AND mat_ID='$matid'");
+$query3=mysqli_query($dbConn, "UPDATE assignmaterial SET assign_qua='$assignqua', assign_date='$assigndate' WHERE sub_store_ID='$substoreid' AND mat_ID='$matid'");
 if($query3)
 {
 header('location:viewassignedmats.php');

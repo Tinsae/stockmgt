@@ -10,7 +10,7 @@ $requser=$_POST['requser'];
 
 include('connect.php');
 $query="INSERT INTO requestmaterial(sub_store_ID, mat_ID, reqt_user) VALUES('$substoreid','$matid','$requser')";
-$result=mysql_query($query);	
+$result=mysqli_query($dbConn, $query);	
 if($result)
 {
 echo '<script language="javascript">';

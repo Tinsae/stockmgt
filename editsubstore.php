@@ -10,13 +10,13 @@ if(isset($_POST['submit']))
 $department=$_POST['department'];
 $block=$_POST['block'];
 
-$query3=mysql_query("UPDATE substore SET department='$department', block='$block' WHERE sub_store_ID='$substoreid'");
+$query3=mysqli_query($dbConn, "UPDATE substore SET department='$department', block='$block' WHERE sub_store_ID='$substoreid'");
 if($query3)
 {
 header('location:viewsubstores.php');
 }
 }
-$query1=mysql_query("SELECT * FROM substore where sub_store_ID='$substoreid'");
+$query1=mysqli_query($dbConn, "SELECT * FROM substore where sub_store_ID='$substoreid'");
 $query2=mysql_fetch_array($query1);
 }
 ?>
