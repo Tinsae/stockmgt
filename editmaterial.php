@@ -13,15 +13,15 @@ $unitprice=$_POST['unitprice'];
 $quantity=$_POST['quantity'];
 
 
-$query3=mysql_query("UPDATE material SET mat_name='$matname', 
+$query3=mysqli_query($dbConn, "UPDATE material SET mat_name='$matname', 
 mat_type='$mattype', unit_price='$unitprice', quantity='$quantity' WHERE mat_id='$matid'");
 if($query3)
 {
 header('location:viewmaterials.php');
 }
 }
-$query1=mysql_query("SELECT * FROM material where mat_ID='$matid'");
-$query2=mysql_fetch_array($query1);
+$query1=mysqli_query($dbConn, "SELECT * FROM material where mat_ID='$matid'");
+$query2=mysqli_fetch_array($query1);
 }
 ?>
 

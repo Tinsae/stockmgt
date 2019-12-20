@@ -17,7 +17,7 @@ $query="INSERT INTO user(first_name,last_name,sex,user_name,password,user_type) 
 else
 $query="INSERT INTO user VALUES('$firstname','$lastname','$sex','$username','$password','$usertype','$substore')";
 
-$result=mysql_query($query);
+$result=mysqli_query($dbConn, $query);
 echo mysql_error();
 if($result)
 {

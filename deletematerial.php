@@ -4,7 +4,7 @@ include('connect.php');
 if(isset($_GET['matid']))
 {
 $id=$_GET['matid'];
-$query1=mysql_query("DELETE FROM material WHERE mat_ID='".$_GET['matid']."'");
+$query1=mysqli_query($dbConn, "DELETE FROM material WHERE mat_ID='".$_GET['matid']."'");
 if($query1)
 {
 echo "<script>

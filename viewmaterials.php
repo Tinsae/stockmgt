@@ -168,8 +168,8 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 			</tr>
 <?php
 include('connect.php');
-$query1=mysql_query("SELECT * FROM material");
-while($query2=mysql_fetch_array($query1))	
+$query1=mysqli_query($dbConn, "SELECT * FROM material");
+while($query2=mysqli_fetch_array($query1))	
 {	
 echo "<tr><td>".$query2['mat_ID']."</td>";
 echo "<td>".$query2['mat_name']."</td>";

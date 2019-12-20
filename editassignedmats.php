@@ -18,7 +18,7 @@ if($query3)
 header('location:viewassignedmats.php');
 }
 }
-$query1=mysql_query("SELECT * FROM assignmaterial where sub_store_ID='$substoreid' AND mat_ID='$matid'");
+$query1=mysqli_query($dbConn, "SELECT * FROM assignmaterial where sub_store_ID='$substoreid' AND mat_ID='$matid'");
 $query2=mysql_fetch_array($query1);
 }
 ?>

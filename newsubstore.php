@@ -7,7 +7,7 @@ $block=$_POST['block'];
 include('connect.php');
 $query="INSERT INTO substore VALUES ('$subid','$dept','$block')";
 
-$result=mysql_query($query);
+$result=mysqli_query($dbConn, $query);
 if($result)
 {
 echo '<script language="javascript">';

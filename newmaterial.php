@@ -11,7 +11,7 @@ $quantity=$_POST['quantity'];
 
 include('connect.php');
 $query="INSERT INTO material VALUES ('$matid','$matname','$mattype','$unitprice','$quantity')";
-$result=mysql_query($query);
+$result=mysqli_query($dbConn, $query);
 if($result)
 {
 echo '<script language="javascript">';
